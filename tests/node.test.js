@@ -1,4 +1,6 @@
-const assert = require("chai").assert
-const {aufgabe01} = require("../script.js")
+import {assert} from "chai"
+import * as funcs from "../script.js"
 
-require("./test.suite.js")
+import {testSuite} from "./test.suite.js"
+
+testSuite({assert, funcs})

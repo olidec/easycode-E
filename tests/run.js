@@ -1,6 +1,6 @@
 import "./setup.js"
 
-import "./test.suite.js"
+import "./browser.test.js"
 
 mocha.checkLeaks()
 mocha.run()

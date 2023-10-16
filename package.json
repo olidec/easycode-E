@@ -2,6 +2,7 @@
   "name": "easycode",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "test": "mocha tests/node.test.js"
   },

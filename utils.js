@@ -1,19 +1,19 @@
-function print(args) {
+export function print(args) {
   var element = document.querySelector("#output")
   var oldContent = element.textContent
   element.textContent = `${oldContent}\n> ${args}`
 }
 
-function read() {
+export function read() {
   var element = document.querySelector("#input")
   return element.value
 }
 
-function parseArgs(input) {
+export function parseArgs(input) {
   return input.split(" ")
 }
 
-function $(callback) {
+export function $(callback) {
   const value = read()
   const result = callback(value)
   print(result)

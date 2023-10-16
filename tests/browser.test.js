@@ -1,5 +1,5 @@
-import {assert} from "chai"
+const assert = chai.assert
+import * as funcs from "../script.js"
 
-import("./test.suite.js").then(module => {
-  console.log("stupid modules...")
-})
+import {testSuite} from "./test.suite.js"
+testSuite({assert, funcs})
