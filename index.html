@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
-        <script defer src="utils.js"></script>
-        <script defer src="script.js"></script>
-    </head>
-    <body>
-        <h1>Simple Programming</h1>
-        
-        <input id="input" type="text" placeholder="Eingabe..."/>
-        <div class="button-container">
-            <button type="button" onclick="aufgabe1()">Aufgabe 1</button>
-            <button type="button" onclick="aufgabe2()">Aufgabe 2</button>
-            <button type="button" onclick="aufgabe3()">Aufgabe 3</button>
-        </div>
 
-        <div id="output">
-        </div>
-    </body>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+    <script src="helper.js" type="module"></script>
+</head>
+
+<body>
+    <h1>Simple Programming</h1>
+
+    <input id="input" type="text" placeholder="Eingabe..." />
+    <div class="button-container">
+        <button type="button" onclick="$(aufgabe01)">Aufgabe 1</button>
+    </div>
+
+    <div id="output"></div>
+
+
+    <script type="module" src="tests/run.js"></script>
+</body>
+
 </html>
