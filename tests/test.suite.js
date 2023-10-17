@@ -1,37 +1,43 @@
 export function testSuite({assert, funcs}) {
-  describe("Aufgabe 1", () => {
-    it("Die Funktion 'sayHello()' sollte existieren", () => {
+  function nit(description, callback) {
+    it(description, function () {
+      if (typeof window === "undefined") {
+        this.skip()
+      } else {
+        callback()
+      }
+    })
+  }
+
+  describe("Aufgabe 1", function () {
+    it("Die Funktion 'sayHello()' sollte existieren", function () {
       assert.equal(typeof funcs.sayHello, "function")
     })
   })
 
-  describe("Aufgabe 2", () => {
-    it("Die Funktion 'changeBackground()' sollte existieren", () => {
+  describe("Aufgabe 2", function () {
+    it("Die Funktion 'changeBackground()' sollte existieren", function () {
       assert.equal(typeof funcs.changeBackground, "function")
     })
-    it("Sollte die Hintergrundfarbe von body verändern", () => {
-      if (typeof document === "undefined") {
-        it.skip()
-      } else {
-        const body = document.querySelector("body")
-        const bgColor = document.querySelector("body").style.backgroundColor
-        changeBackground()
-        const bgColorNew = document.querySelector("body").style.backgroundColor
-        assert.notEqual(bgColor, bgColorNew)
-        body.style.backgroundColor = bgColor
-      }
+    nit("Sollte die Hintergrundfarbe von body verändern", function () {
+      const body = document.querySelector("body")
+      const bgColor = document.querySelector("body").style.backgroundColor
+      changeBackground()
+      const bgColorNew = document.querySelector("body").style.backgroundColor
+      assert.notEqual(bgColor, bgColorNew)
+      body.style.backgroundColor = bgColor
     })
   })
 
-  describe("Aufgabe 3", () => {
-    it("Die Funktion 'deleteText()' sollte existieren", () => {
+  describe("Aufgabe 3", function () {
+    it("Die Funktion 'deleteText()' sollte existieren", function () {
       assert.equal(typeof deleteText, "function")
     })
-    it("Es soll ein HTML-Element mit der ID 'to-delete' geben", () => {
+    nit("Es soll ein HTML-Element mit der ID 'to-delete' geben", function () {
       const elem = document.querySelector("#to-delete")
       assert.notEqual(elem, null)
     })
-    it("Der Text vom Element #to-delete soll auf 'Inhalt gelöscht' gesetzt werden.", () => {
+    nit("Der Text vom Element #to-delete soll auf 'Inhalt gelöscht' gesetzt werden.", function () {
       const elem = document.querySelector("#to-delete")
       const textBefore = elem.textContent
       deleteText()
@@ -42,53 +48,59 @@ export function testSuite({assert, funcs}) {
     })
   })
 
-  describe("Aufgabe 4", () => {
-    it("Die Funktion 'incrementCounter()' sollte existieren", () => {
+  describe("Aufgabe 4", function () {
+    it("Die Funktion 'incrementCounter()' sollte existieren", function () {
       assert.equal(typeof incrementCounter, "function")
     })
-    it("Es soll ein HTML-Element mit der ID 'counter' geben", () => {
+    nit("Es soll ein HTML-Element mit der ID 'counter' geben", function () {
       const elem = document.querySelector("#counter")
       assert.notEqual(elem, null)
     })
-    it("Der Counter soll um eins hochgezählt werden, wen die Funktion 'incrementCounter()' verwendet wird.", () => {
-      const elem = document.querySelector("#counter")
-      const counterBefore = parseInt(elem.textContent)
-      incrementCounter()
-      const counterAfter = parseInt(elem.textContent)
-      assert.notEqual(counterBefore, counterAfter)
-      assert.equal(counterAfter, counterBefore + 1)
-      elem.textContent = counterBefore
-    })
+    nit(
+      "Der Counter soll um eins hochgezählt werden, wen die Funktion 'incrementCounter()' verwendet wird.",
+      function () {
+        const elem = document.querySelector("#counter")
+        const counterBefore = parseInt(elem.textContent)
+        incrementCounter()
+        const counterAfter = parseInt(elem.textContent)
+        assert.notEqual(counterBefore, counterAfter)
+        assert.equal(counterAfter, counterBefore + 1)
+        elem.textContent = counterBefore
+      }
+    )
   })
 
-  describe("Aufgabe 5", () => {
-    it("Die Funktion 'decrementCounter()' sollte existieren", () => {
+  describe("Aufgabe 5", function () {
+    it("Die Funktion 'decrementCounter()' sollte existieren", function () {
       assert.equal(typeof decrementCounter, "function")
     })
-    it("Es soll ein HTML-Element mit der ID 'counter' geben", () => {
+    nit("Es soll ein HTML-Element mit der ID 'counter' geben", function () {
       const elem = document.querySelector("#counter")
       assert.notEqual(elem, null)
     })
-    it("Der Counter soll um eins vermindert werden, wen die Funktion 'decrementCounter()' verwendet wird.", () => {
-      const elem = document.querySelector("#counter")
-      const counterBefore = parseInt(elem.textContent)
-      decrementCounter()
-      const counterAfter = parseInt(elem.textContent)
-      assert.notEqual(counterBefore, counterAfter)
-      assert.equal(counterAfter, counterBefore - 1)
-      elem.textContent = counterBefore
-    })
+    nit(
+      "Der Counter soll um eins vermindert werden, wen die Funktion 'decrementCounter()' verwendet wird.",
+      function () {
+        const elem = document.querySelector("#counter")
+        const counterBefore = parseInt(elem.textContent)
+        decrementCounter()
+        const counterAfter = parseInt(elem.textContent)
+        assert.notEqual(counterBefore, counterAfter)
+        assert.equal(counterAfter, counterBefore - 1)
+        elem.textContent = counterBefore
+      }
+    )
   })
 
-  describe("Aufgabe 6", () => {
-    it("Die Funktion 'resetCounter()' sollte existieren", () => {
+  describe("Aufgabe 6", function () {
+    it("Die Funktion 'resetCounter()' sollte existieren", function () {
       assert.equal(typeof resetCounter, "function")
     })
-    it("Es soll ein HTML-Element mit der ID 'counter' geben", () => {
+    nit("Es soll ein HTML-Element mit der ID 'counter' geben", function () {
       const elem = document.querySelector("#counter")
       assert.notEqual(elem, null)
     })
-    it("Der Counter soll auf 0 gesetzt werden, wen die Funktion 'resetCounter()' verwendet wird.", () => {
+    nit("Der Counter soll auf 0 gesetzt werden, wen die Funktion 'resetCounter()' verwendet wird.", function () {
       const elem = document.querySelector("#counter")
       const counterBefore = parseInt(elem.textContent)
       resetCounter()
@@ -98,19 +110,19 @@ export function testSuite({assert, funcs}) {
     })
   })
 
-  describe("Aufgabe 7", () => {
-    it("Die Funktion 'writeText()' sollte existieren", () => {
+  describe("Aufgabe 7", function () {
+    it("Die Funktion 'writeText()' sollte existieren", function () {
       assert.equal(typeof writeText, "function")
     })
-    it("Es soll ein HTML-Input-Element mit der ID 'input' geben", () => {
+    nit("Es soll ein HTML-Input-Element mit der ID 'input' geben", function () {
       const elem = document.querySelector("input#input")
       assert.notEqual(elem, null)
     })
-    it("Es soll ein HTML-Element mit der ID 'output' geben", () => {
+    nit("Es soll ein HTML-Element mit der ID 'output' geben", function () {
       const elem = document.querySelector("#output")
       assert.notEqual(elem, null)
     })
-    it("Der Text von dem Eingabeelement #input, soll in das Element #output geschrieben werden.", () => {
+    nit("Der Text von dem Eingabeelement #input, soll in das Element #output geschrieben werden.", function () {
       const input = document.querySelector("#input")
       const inputText = input.value
       const output = document.querySelector("#output")
