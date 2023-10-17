@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm install
-      - run: npm test-report
+      - run: npm run test-report
 
       - name: Test Report
         uses: dorny/test-reporter@v1
