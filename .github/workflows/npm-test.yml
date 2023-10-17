@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: report
-          path: test-result.json
+          path: test-report.json
 
       - name: Test Report
         uses: dorny/test-reporter@v1
@@ -32,5 +32,5 @@ jobs:
         with:
           artifact: "test-result.json"
           name: Mocha Tests # Name of the check run which will be created
-          path: test-result.json # Path to test results
+          path: test-report.json # Path to test results
           reporter: mocha-json # Format of test results
