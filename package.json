@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha tests/node.test.js",
-    "test-report": "mocha --reporter json tests/node.test.js > test-report.json"
+    "test-report": "mocha --reporter json tests/node.test.js > reports/test-report.json"
   },
   "repository": {
     "type": "git",
