@@ -31,7 +31,7 @@ export function testSuite({assert, funcs}) {
 
   describe("Aufgabe 3", function () {
     it("Die Funktion 'deleteText()' sollte existieren", function () {
-      assert.equal(typeof deleteText, "function")
+      assert.equal(typeof funcs.deleteText, "function")
     })
     nit("Es soll ein HTML-Element mit der ID 'to-delete' geben", function () {
       const elem = document.querySelector("#to-delete")
@@ -40,7 +40,7 @@ export function testSuite({assert, funcs}) {
     nit("Der Text vom Element #to-delete soll auf 'Inhalt gelöscht' gesetzt werden.", function () {
       const elem = document.querySelector("#to-delete")
       const textBefore = elem.textContent
-      deleteText()
+      funcs.deleteText()
       const textAfter = elem.textContent
       assert.notEqual(textBefore, textAfter)
       assert.equal(textAfter, "Inhalt gelöscht")
@@ -50,7 +50,7 @@ export function testSuite({assert, funcs}) {
 
   describe("Aufgabe 4", function () {
     it("Die Funktion 'incrementCounter()' sollte existieren", function () {
-      assert.equal(typeof incrementCounter, "function")
+      assert.equal(typeof funcs.incrementCounter, "function")
     })
     nit("Es soll ein HTML-Element mit der ID 'counter' geben", function () {
       const elem = document.querySelector("#counter")
@@ -61,7 +61,7 @@ export function testSuite({assert, funcs}) {
       function () {
         const elem = document.querySelector("#counter")
         const counterBefore = parseInt(elem.textContent)
-        incrementCounter()
+        funcs.incrementCounter()
         const counterAfter = parseInt(elem.textContent)
         assert.notEqual(counterBefore, counterAfter)
         assert.equal(counterAfter, counterBefore + 1)
@@ -72,7 +72,7 @@ export function testSuite({assert, funcs}) {
 
   describe("Aufgabe 5", function () {
     it("Die Funktion 'decrementCounter()' sollte existieren", function () {
-      assert.equal(typeof decrementCounter, "function")
+      assert.equal(typeof funcs.decrementCounter, "function")
     })
     nit("Es soll ein HTML-Element mit der ID 'counter' geben", function () {
       const elem = document.querySelector("#counter")
@@ -83,7 +83,7 @@ export function testSuite({assert, funcs}) {
       function () {
         const elem = document.querySelector("#counter")
         const counterBefore = parseInt(elem.textContent)
-        decrementCounter()
+        funcs.decrementCounter()
         const counterAfter = parseInt(elem.textContent)
         assert.notEqual(counterBefore, counterAfter)
         assert.equal(counterAfter, counterBefore - 1)
@@ -94,7 +94,7 @@ export function testSuite({assert, funcs}) {
 
   describe("Aufgabe 6", function () {
     it("Die Funktion 'resetCounter()' sollte existieren", function () {
-      assert.equal(typeof resetCounter, "function")
+      assert.equal(typeof funcs.resetCounter, "function")
     })
     nit("Es soll ein HTML-Element mit der ID 'counter' geben", function () {
       const elem = document.querySelector("#counter")
@@ -103,7 +103,7 @@ export function testSuite({assert, funcs}) {
     nit("Der Counter soll auf 0 gesetzt werden, wen die Funktion 'resetCounter()' verwendet wird.", function () {
       const elem = document.querySelector("#counter")
       const counterBefore = parseInt(elem.textContent)
-      resetCounter()
+      funcs.resetCounter()
       const counterAfter = parseInt(elem.textContent)
       assert.equal(counterAfter, 0)
       elem.textContent = counterBefore
@@ -112,7 +112,7 @@ export function testSuite({assert, funcs}) {
 
   describe("Aufgabe 7", function () {
     it("Die Funktion 'writeText()' sollte existieren", function () {
-      assert.equal(typeof writeText, "function")
+      assert.equal(typeof funcs.writeText, "function")
     })
     nit("Es soll ein HTML-Input-Element mit der ID 'input' geben", function () {
       const elem = document.querySelector("input#input")
@@ -127,7 +127,7 @@ export function testSuite({assert, funcs}) {
       const inputText = input.value
       const output = document.querySelector("#output")
       const outputBefore = output.textContent
-      writeText()
+      funcs.writeText()
       const outputTextAfter = output.textContent
       assert.equal(outputTextAfter, outputBefore + "\n" + inputText)
       output.textContent = outputBefore
