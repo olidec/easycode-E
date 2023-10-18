@@ -1,6 +1,6 @@
-import {assert} from "chai"
+import { assert } from "chai"
 import * as funcs from "../script.js"
 
-import {testSuite} from "./test.suite.js"
+import { testSuite } from "./test.suite.js"
 
-testSuite({assert, funcs})
+testSuite({ assert, funcs })

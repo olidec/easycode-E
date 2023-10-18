@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "mocha tests/node.test.js",
-    "test-report": "mocha --reporter json tests/node.test.js > test-report.json"
+    "test-report": "mocha --reporter json tests/node.test.js > test-report.json",
+    "lint": "prettier --check .",
+    "lint-fix": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,8 @@
   "homepage": "https://github.com/cedricgeissmann/easycode#readme",
   "devDependencies": {
     "jest": "^29.0.3",
-    "mocha": "^10.0.0"
+    "mocha": "^10.0.0",
+    "prettier": "^3.0.3"
   },
   "dependencies": {
     "chai": "^4.3.10"

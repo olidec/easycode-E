@@ -1,4 +1,4 @@
-export function testSuite({assert, funcs}) {
+export function testSuite({ assert, funcs }) {
   function nit(description, callback) {
     it(description, function () {
       if (typeof window === "undefined") {
@@ -37,15 +37,18 @@ export function testSuite({assert, funcs}) {
       const elem = document.querySelector("#to-delete")
       assert.notEqual(elem, null)
     })
-    nit("Der Text vom Element #to-delete soll auf 'Inhalt gelöscht' gesetzt werden.", function () {
-      const elem = document.querySelector("#to-delete")
-      const textBefore = elem.textContent
-      funcs.deleteText()
-      const textAfter = elem.textContent
-      assert.notEqual(textBefore, textAfter)
-      assert.equal(textAfter, "Inhalt gelöscht")
-      elem.textContent = textBefore
-    })
+    nit(
+      "Der Text vom Element #to-delete soll auf 'Inhalt gelöscht' gesetzt werden.",
+      function () {
+        const elem = document.querySelector("#to-delete")
+        const textBefore = elem.textContent
+        funcs.deleteText()
+        const textAfter = elem.textContent
+        assert.notEqual(textBefore, textAfter)
+        assert.equal(textAfter, "Inhalt gelöscht")
+        elem.textContent = textBefore
+      },
+    )
   })
 
   describe("Aufgabe 4", function () {
@@ -66,7 +69,7 @@ export function testSuite({assert, funcs}) {
         assert.notEqual(counterBefore, counterAfter)
         assert.equal(counterAfter, counterBefore + 1)
         elem.textContent = counterBefore
-      }
+      },
     )
   })
 
@@ -88,7 +91,7 @@ export function testSuite({assert, funcs}) {
         assert.notEqual(counterBefore, counterAfter)
         assert.equal(counterAfter, counterBefore - 1)
         elem.textContent = counterBefore
-      }
+      },
     )
   })
 
@@ -100,14 +103,17 @@ export function testSuite({assert, funcs}) {
       const elem = document.querySelector("#counter")
       assert.notEqual(elem, null)
     })
-    nit("Der Counter soll auf 0 gesetzt werden, wen die Funktion 'resetCounter()' verwendet wird.", function () {
-      const elem = document.querySelector("#counter")
-      const counterBefore = parseInt(elem.textContent)
-      funcs.resetCounter()
-      const counterAfter = parseInt(elem.textContent)
-      assert.equal(counterAfter, 0)
-      elem.textContent = counterBefore
-    })
+    nit(
+      "Der Counter soll auf 0 gesetzt werden, wen die Funktion 'resetCounter()' verwendet wird.",
+      function () {
+        const elem = document.querySelector("#counter")
+        const counterBefore = parseInt(elem.textContent)
+        funcs.resetCounter()
+        const counterAfter = parseInt(elem.textContent)
+        assert.equal(counterAfter, 0)
+        elem.textContent = counterBefore
+      },
+    )
   })
 
   describe("Aufgabe 7", function () {
@@ -122,15 +128,18 @@ export function testSuite({assert, funcs}) {
       const elem = document.querySelector("#output")
       assert.notEqual(elem, null)
     })
-    nit("Der Text von dem Eingabeelement #input, soll in das Element #output geschrieben werden.", function () {
-      const input = document.querySelector("#input")
-      const inputText = input.value
-      const output = document.querySelector("#output")
-      const outputBefore = output.textContent
-      funcs.writeText()
-      const outputTextAfter = output.textContent
-      assert.equal(outputTextAfter, outputBefore + "\n" + inputText)
-      output.textContent = outputBefore
-    })
+    nit(
+      "Der Text von dem Eingabeelement #input, soll in das Element #output geschrieben werden.",
+      function () {
+        const input = document.querySelector("#input")
+        const inputText = input.value
+        const output = document.querySelector("#output")
+        const outputBefore = output.textContent
+        funcs.writeText()
+        const outputTextAfter = output.textContent
+        assert.equal(outputTextAfter, outputBefore + "\n" + inputText)
+        output.textContent = outputBefore
+      },
+    )
   })
 }
