@@ -1,7 +1,25 @@
 export function print(args) {
   var element = document.querySelector("#output-content")
+  const outputHeight = parseInt(
+    getComputedStyle(document.querySelector(":root"))
+      .getPropertyValue("--output-height")
+      .split("px")[0],
+  )
+  const outputHeaderHeight = parseInt(
+    getComputedStyle(document.querySelector(":root"))
+      .getPropertyValue("--output-header-height")
+      .split("px")[0],
+  )
+  const scrollToBottom =
+    element.scrollHeight - element.scrollTop <=
+    outputHeight - outputHeaderHeight
+      ? true
+      : false
   var oldContent = element.textContent
   element.textContent = `${oldContent}\n> ${args}`
+  if (scrollToBottom) {
+    element.scrollTop = element.scrollHeight
+  }
 }
 
 export function read() {
