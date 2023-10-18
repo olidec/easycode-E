@@ -14,3 +14,8 @@ export function decrementCounter() {}
 export function resetCounter() {}
 
 export function writeText() {}
+
+export function aufgabe08(args) {
+  let input = args
+  return args.toLowerCase()
+}

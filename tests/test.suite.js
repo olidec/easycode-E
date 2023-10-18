@@ -142,4 +142,10 @@ export function testSuite({ assert, funcs }) {
       },
     )
   })
+
+  describe("Aufgabe 8", function () {
+    it("Die Funktion 'aufgabe08()' sollte existieren", function () {
+      assert.equal(typeof funcs.aufgabe08, "function")
+    })
+  })
 }
