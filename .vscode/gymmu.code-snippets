@@ -1,0 +1,29 @@
+{
+	"[gymmu] Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"[gymmu] Create a function": {
+		"scope": "javascript",
+		"prefix": "func",
+		"body": [
+			"function ${1:name}() {",
+			"	${0}",
+			"}"
+		],
+		"description": "A javascript function."
+	},
+	"[gymmu] Button mit einer Funktion": {
+		"scope": "html",
+		"prefix": "btn",
+		"body": [
+			"<button onclick=\"${1:functionName}()\">${2:Button text}</button>"
+		],
+		"description": "Erstellt einen Button mit einer onclick Funktion."
+	}
+}
