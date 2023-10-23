@@ -148,4 +148,22 @@ export function testSuite({ assert, funcs }) {
       assert.equal(typeof funcs.aufgabe08, "function")
     })
   })
+
+  describe("Aufgabe 1 (DC)", function () {
+    it("Die Funtion 'deleteE()' soll existieren.", function () {
+      assert.equal(typeof funcs.deleteE, "function")
+    })
+    it("Die Eingabe 'e' wird zum leeren String ''.", function () {
+      const input = 'e'
+      const res = funcs.deleteE(input)
+      assert.equal(res,'')
+    })
+    it("Auch grosse 'E's werden gelöscht", function () {
+      const input = 'E'
+      const res = funcs.deleteE(input)
+      assert.equal(res,'')
+    })
+  })
 }
+
+
