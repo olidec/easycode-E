@@ -164,6 +164,20 @@ export function testSuite({ assert, funcs }) {
       assert.equal(res,'')
     })
   })
+
+
+  describe("Aufgabe 2 (DC)", function () {
+    it("Die Funtion 'upperCase()' soll existieren.", function () {
+      assert.equal(typeof funcs.upperCase, "function")
+    })
+    it("Die Eingabe 'abc' wird zu 'ABC'.", function () {
+      const input = 'abc'
+      const res = funcs.upperCase(input)
+      assert.equal(res,'ABC')
+    })
+  })
+
+
 }
 
 
