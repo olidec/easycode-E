@@ -154,30 +154,25 @@ export function testSuite({ assert, funcs }) {
       assert.equal(typeof funcs.deleteE, "function")
     })
     it("Die Eingabe 'e' wird zum leeren String ''.", function () {
-      const input = 'e'
+      const input = "e"
       const res = funcs.deleteE(input)
-      assert.equal(res,'')
+      assert.equal(res, "")
     })
     it("Auch grosse 'E's werden gelöscht", function () {
-      const input = 'E'
+      const input = "E"
       const res = funcs.deleteE(input)
-      assert.equal(res,'')
+      assert.equal(res, "")
     })
   })
-
 
   describe("Aufgabe 2 (DC)", function () {
     it("Die Funktion 'upperCase()' soll existieren.", function () {
       assert.equal(typeof funcs.upperCase, "function")
     })
     it("Die Eingabe 'abc' wird zu 'ABC'.", function () {
-      const input = 'abc'
+      const input = "abc"
       const res = funcs.upperCase(input)
-      assert.equal(res,'ABC')
+      assert.equal(res, "ABC")
     })
   })
-
-
 }
-
-
