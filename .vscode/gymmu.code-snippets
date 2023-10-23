@@ -22,7 +22,7 @@
 		"scope": "html",
 		"prefix": "btn",
 		"body": [
-			"<button onclick=\"${1:functionName}()\">${2:Button text}</button>"
+			"<button onclick=\"$(${1:functionName})\">${2:Button text}</button>"
 		],
 		"description": "Erstellt einen Button mit einer onclick Funktion."
 	}
