@@ -150,7 +150,7 @@ export function testSuite({ assert, funcs }) {
   })
 
   describe("Aufgabe 1 (DC)", function () {
-    it("Die Funtion 'deleteE()' soll existieren.", function () {
+    it("Die Funktion 'deleteE()' soll existieren.", function () {
       assert.equal(typeof funcs.deleteE, "function")
     })
     it("Die Eingabe 'e' wird zum leeren String ''.", function () {
@@ -167,7 +167,7 @@ export function testSuite({ assert, funcs }) {
 
 
   describe("Aufgabe 2 (DC)", function () {
-    it("Die Funtion 'upperCase()' soll existieren.", function () {
+    it("Die Funktion 'upperCase()' soll existieren.", function () {
       assert.equal(typeof funcs.upperCase, "function")
     })
     it("Die Eingabe 'abc' wird zu 'ABC'.", function () {
