@@ -31,8 +31,11 @@
 		"prefix": "it",
 		"body": [
 			"it(\"${1:descrition}\", function() {",
-			"	${0}",
+			"	const input = \"${2}\"",
+			"	const res = funcs.${3}(input)"
+			"	assert.equal(res, \"${4}\")",
 			"})"
+			"${0}",
 		],
 		"description": "Erstellt einen Testfall."
 	},
@@ -56,4 +59,25 @@
 		],
 		"description": "Erstellt einen Testfall der prüft ob eine Funktion existiert."
 	},
+	"[gymmu-admin] Gruppe von Tests für eine Aufgabe": {
+		"scope": "javascript",
+		"prefix": "desc",
+		"body": [
+			"describe(\"${1:description}\", function() {",
+			"	${0}",
+			"})"
+		],
+		"description": "Erstellt eine Gruppe von Tests."
+	},
+	"[gymmu-admin] Gruppe von Tests für eine Aufgabe": {
+		"scope": "javascript",
+		"prefix": "aufg",
+		"body": [
+			"describe(\"Aufgabe ${1:01}\", function() {",
+			"	${0}",
+			"})"
+		],
+		"description": "Erstellt eine Gruppe von Tests für eine Aufgabe."
+	},
+	
 }
