@@ -2,7 +2,6 @@
 
 Einfaches Repository um Javascript zu lernen.
 
-
 ## Aufgabe 01
 
 Schreibe eine Funktion, die aus einem vorgegebenen Text alle `e`s löscht.
@@ -21,16 +20,17 @@ Zähle alle Wörter in einem Text.
 
 ## Aufgabe 05
 
-Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Grossbuchstabe vorkommt.
+Schreibe eine Funktion, die testet, ob in einem Text mindestens ein
+Grossbuchstabe vorkommt.
 
 ## Aufgabe 06
 
-Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Sonderzeichen vorkommt.
+Schreibe eine Funktion, die testet, ob in einem Text mindestens ein
+Sonderzeichen vorkommt.
 
 ## Aufgabe 07
 
 Schreibe eine Funktion, die testet, ob in einem Text das Wort 'und' vorkommt.
-
 
 ## Aufgabe 08
 
@@ -46,41 +46,32 @@ Teste ob eine Eingabe ein korrekter RGB Hexcode ist.
 
 ## Aufgabe 11
 
-Falls die Eingabe ein korrekter RGB-Hexcode ist, ändere die Hintergrundfarbe zu dieser; sonst eine Fehlermeldung.
+Gib den ASCII code eines einzelnen Buchstabens an.
 
 ## Aufgabe 12
 
-Nehme zwei verschiedene Eingaben und verknüpfe sie zu einer einzigen Auagabe. 
+Suche die Position des ersten `e`s in einem Text.
 
 ## Aufgabe 13
 
-Gib den ASCII code eines einzelnen Buchstabens an.
+Suche die Position des letzten `e`s in einem Text.
 
 ## Aufgabe 14
 
-Suche die Position des ersten `e`s in einem Text.
+Suche die Position des dritten `e`s in einem Text.
 
 ## Aufgabe 15
 
-Suche die Position des letzten `e`s in einem Text.
+Schreiben Sie folgende Ausgabe: Sie heissen `name` und sind `alter` Jahre alt,
+wobei `name` und `alter` durch Eingaben eingesetzt werden.
 
 ## Aufgabe 16
 
-Suche die Position des dritten `e`s in einem Text.
+Testen sie, ob eine Eingabe eine Zahl ist.
 
 ## Aufgabe 17
 
-Schreiben Sie folgende Ausgabe: Sie heissen `name` und sind `alter` Jahre alt, wobei `name` und `alter` durch Eingaben eingesetzt werden.
+Testen Sie, ob zwei Eingaben Zahlen sind und falls ja geben Sie die Summe als
+Ausgabe aus; sonst Fehlermeldung.
 
 ## Aufgabe 18
-
-Testen sie, ob eine Eingabe eine Zahl ist.
-
-## Aufgabe 19
-
-Testen Sie, ob zwei Eingaben Zahlen sind und falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
-
-## Aufgabe 20
-
-
-
