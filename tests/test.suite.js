@@ -11,6 +11,12 @@ export function testSuite({ assert, funcs, APP }) {
 
   if (APP.type === "address") {
     describe("Vorname korrekt", function () {
+      it("Die Funktion 'addressCheckFirstname()' soll existieren", function () {
+        assert.equal(typeof funcs.addressCheckFirstname, "function")
+      })
+      it("Die Funktion 'addressCheckFirstname()' soll existieren", function () {
+        assert.equal(typeof funcs.addressCheckFirstname, "function")
+      })
       it("Falsch wenn Vorname leer ist", function () {
         const input = ""
         const res = funcs.addressCheckFirstname(input)

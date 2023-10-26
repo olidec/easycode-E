@@ -25,5 +25,35 @@
 			"<button onclick=\"$(${1:functionName})\">${2:Button text}</button>"
 		],
 		"description": "Erstellt einen Button mit einer onclick Funktion."
-	}
+	},
+	"[gymmu-admin] Testfall": {
+		"scope": "javascript",
+		"prefix": "it",
+		"body": [
+			"it(\"${1:descrition}\", function() {",
+			"	${0}",
+			"})"
+		],
+		"description": "Erstellt einen Testfall."
+	},
+	"[gymmu-admin] Testfall nur für den Browser": {
+		"scope": "javascript",
+		"prefix": "nit",
+		"body": [
+			"nit(\"${1:descrition}\", function() {",
+			"	${0}",
+			"})"
+		],
+		"description": "Erstellt einen Testfall der nur im Browser laufen soll."
+	},
+	"[gymmu-admin] Teste ob Funktion existiert": {
+		"scope": "javascript",
+		"prefix": "checkfunc",
+		"body": [
+			"it(\"Die Funktion '${1:functionName}()' soll existieren\", function() {",
+			"	assert.equal(typeof funcs.${1:functionName}, \"function\")",
+			"})"
+		],
+		"description": "Erstellt einen Testfall der prüft ob eine Funktion existiert."
+	},
 }
