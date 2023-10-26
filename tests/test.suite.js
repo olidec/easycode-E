@@ -29,68 +29,99 @@ export function testSuite({ assert, funcs, APP }) {
       })
     })
   } else {
-    describe("Aufgabe 1", function () {
-      it("Die Funktion 'sayHello()' sollte existieren", function () {
-        assert.equal(typeof funcs.sayHello, "function")
+    describe("Aufgabe 01", function () {
+      it("Die Funktion 'aufgabe01()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe01, "function")
+      })
+      it("Sollte keine 'e's mehr drin haben", function () {
+        const input = "Hello"
+        const res = funcs.aufgabe01(input)
+        assert.equal(res, "Hllo")
+      })
+      it("Sollte keine 'E's mehr drin haben", function () {
+        const input = "Emoji"
+        const res = funcs.aufgabe01(input)
+        assert.equal(res, "moji")
+      })
+      it("Sollte mehrere 'e's löschen", function () {
+        const input = "Hier hat es mehrere 'e's drin."
+        const res = funcs.aufgabe01(input)
+        assert.equal(res, "Hir hat s mhrr ''s drin.")
       })
     })
 
-    describe("Aufgabe 2", function () {
-      it("Die Funktion 'changeBackground()' sollte existieren", function () {
-        assert.equal(typeof funcs.changeBackground, "function")
+    describe("Aufgabe 02", function () {
+      it("Die Funktion 'aufgabe02()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe02, "function")
       })
-      nit("Sollte die Hintergrundfarbe von body verändern", function () {
-        const body = document.querySelector("body")
-        const bgColor = document.querySelector("body").style.backgroundColor
-        changeBackground()
-        const bgColorNew = document.querySelector("body").style.backgroundColor
-        assert.notEqual(bgColor, bgColorNew)
-        body.style.backgroundColor = bgColor
+      it("Sollte nur noch Grossbuchstaben enthalten", function () {
+        const input = "a"
+        const res = funcs.aufgabe02(input)
+        assert.equal(res, "A")
+      })
+      it("Sollte mehrere Buchstaben gross schreiben", function () {
+        const input = "abc"
+        const res = funcs.aufgabe02(input)
+        assert.equal(res, "ABC")
+      })
+      it("Sollten Grossbuchstaben bleiben", function () {
+        const input = "aBc"
+        const res = funcs.aufgabe02(input)
+        assert.equal(res, "ABC")
+      })
+      it("Kann auch mit Sonderzeichen umgehen", function () {
+        const input = "Hier ist ein Satz mit mehreren Zeichen."
+        const res = funcs.aufgabe02(input)
+        assert.equal(res, "HIER IST EIN SATZ MIT MEHREREN ZEICHEN.")
       })
     })
 
-    describe("Aufgabe 3", function () {
-      it("Die Funktion 'deleteText()' sollte existieren", function () {
-        assert.equal(typeof funcs.deleteText, "function")
+    describe("Aufgabe 03", function () {
+      it("Die Funktion 'aufgabe03()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe03, "function")
       })
-      nit("Es soll ein HTML-Element mit der ID 'to-delete' geben", function () {
-        const elem = document.querySelector("#to-delete")
-        assert.notEqual(elem, null)
+      it("Sollte 1 'e' enthalten", function () {
+        const input = "Hello"
+        const res = funcs.aufgabe03(input)
+        assert.equal(res, 1)
       })
-      nit(
-        "Der Text vom Element #to-delete soll auf 'Inhalt gelöscht' gesetzt werden.",
-        function () {
-          const elem = document.querySelector("#to-delete")
-          const textBefore = elem.textContent
-          funcs.deleteText()
-          const textAfter = elem.textContent
-          assert.notEqual(textBefore, textAfter)
-          assert.equal(textAfter, "Inhalt gelöscht")
-          elem.textContent = textBefore
-        },
-      )
+      it("Sollte 4 'e's enthalten", function () {
+        const input = "ein einfacher Text."
+        const res = funcs.aufgabe03(input)
+        assert.equal(res, 4)
+      })
+      it("Sollte auch 'E's zählen", function () {
+        const input = "Ein einfacher Text."
+        const res = funcs.aufgabe03(input)
+        assert.equal(res, 4)
+      })
     })
 
-    describe("Aufgabe 4", function () {
-      it("Die Funktion 'incrementCounter()' sollte existieren", function () {
-        assert.equal(typeof funcs.incrementCounter, "function")
+    describe("Aufgabe 04", function () {
+      it("Die Funktion 'aufgabe04()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe04, "function")
       })
-      nit("Es soll ein HTML-Element mit der ID 'counter' geben", function () {
-        const elem = document.querySelector("#counter")
-        assert.notEqual(elem, null)
+      it("Sollte 2 Wörter zählen", function () {
+        const input = "Zwei Wörter"
+        const res = funcs.aufgabe03(input)
+        assert.equal(res, 2)
       })
-      nit(
-        "Der Counter soll um eins hochgezählt werden, wen die Funktion 'incrementCounter()' verwendet wird.",
-        function () {
-          const elem = document.querySelector("#counter")
-          const counterBefore = parseInt(elem.textContent)
-          funcs.incrementCounter()
-          const counterAfter = parseInt(elem.textContent)
-          assert.notEqual(counterBefore, counterAfter)
-          assert.equal(counterAfter, counterBefore + 1)
-          elem.textContent = counterBefore
-        },
-      )
+      it("Sollte 4 Wörter zählen", function () {
+        const input = "Nur vier Wörter hier."
+        const res = funcs.aufgabe03(input)
+        assert.equal(res, 4)
+      })
+      it("Kann auch mit Sonderzeichen umgehen", function () {
+        const input =
+          "Nicht alles - was von Leerzeichen getrennt wird, sind Wörter..."
+        const res = funcs.aufgabe03(input)
+        assert.equal(res, 9)
+      })
+      it("Zählt auch Zahlen als Wörter", function () {
+        const input = "Nur vier Wörter hier."
+        const res = funcs.aufgabe03(input)
+        assert.equal(res, 4)
+      })
     })
 
     describe("Aufgabe 5", function () {
