@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://cedricgeissmann@github.com/cedricgeissmann/easycode.git"
+    "url": "git+https://cedricgeissmann@github.com/gymmu/easycode.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cedricgeissmann/easycode/issues"
+    "url": "https://github.com/gymmu/easycode/issues"
   },
-  "homepage": "https://github.com/cedricgeissmann/easycode#readme",
+  "homepage": "https://github.com/gymmu/easycode#readme",
   "devDependencies": {
     "jest": "^29.0.3",
     "mocha": "^10.0.0",
