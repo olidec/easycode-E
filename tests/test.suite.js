@@ -13,12 +13,12 @@ export function testSuite({ assert, funcs, APP }) {
     describe("Vorname korrekt", function () {
       it("Falsch wenn Vorname leer ist", function () {
         const input = ""
-        const res = funcs.addressFirstname(input)
+        const res = funcs.addressCheckFirstname(input)
         assert.equal(res, false)
       })
       it("Richtig wenn Vorname länger wie ein Zeichen ist", function () {
         const input = "C"
-        const res = funcs.addressFirstname(input)
+        const res = funcs.addressCheckFirstname(input)
         assert.equal(res, true)
       })
     })
