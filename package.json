@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha tests/node.test.js",
+    "test-address": "mocha tests/node.test.js address",
     "test-report": "mocha --reporter json tests/node.test.js > test-report.json",
     "lint": "prettier --check .",
     "lint-fix": "prettier --write ."
