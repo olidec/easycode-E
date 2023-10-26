@@ -62,16 +62,28 @@ Suche die Position des dritten `e`s in einem Text.
 
 ## Aufgabe 15
 
-Schreiben Sie folgende Ausgabe: Sie heissen `name` und sind `alter` Jahre alt,
-wobei `name` und `alter` durch Eingaben eingesetzt werden.
+Lesen Sie die Eingabe nur bis zum ersten Leerzeichen ein.
 
 ## Aufgabe 16
 
-Testen sie, ob eine Eingabe eine Zahl ist.
+Lesen Sie die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und
+den Rest als den zweiten Teil.
 
 ## Aufgabe 17
 
-Testen Sie, ob zwei Eingaben Zahlen sind und falls ja geben Sie die Summe als
-Ausgabe aus; sonst Fehlermeldung.
+Lesen Sie die Eingabe als Liste ein, Einträge in der Liste werden von einem ','
+getrennt.
 
 ## Aufgabe 18
+
+Schreiben Sie folgende Ausgabe: Sie heissen `name` und sind `alter` Jahre alt,
+wobei `name` und `alter` durch Eingaben eingesetzt werden.
+
+## Aufgabe 19
+
+Testen sie, ob eine Eingabe eine Zahl ist.
+
+## Aufgabe 20
+
+Testen Sie, ob zwei Eingaben Zahlen sind und falls ja geben Sie die Summe als
+Ausgabe aus; sonst Fehlermeldung.

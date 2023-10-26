@@ -348,5 +348,71 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(res, -1)
       })
     })
+    describe("Aufgabe 13", function () {
+      it("Die Funktion 'aufgabe13()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe13, "function")
+      })
+      it("Sollte die letzte Position finden, an der ein 'e' steht", function () {
+        const input = "eine"
+        const res = funcs.aufgabe13(input)
+        assert.equal(res, 3)
+      })
+      it("Sollte -1 zurückgeben wenn kein 'e' vorkommt", function () {
+        const input = "nichts"
+        const res = funcs.aufgabe13(input)
+        assert.equal(res, -1)
+      })
+    })
+    describe("Aufgabe 14", function () {
+      it("Die Funktion 'aufgabe14()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe14, "function")
+      })
+      it("Sollte -1 geben, da nicht genügend 'e's vorkommen", function () {
+        const input = "abcdefge"
+        const res = funcs.aufgabe14(input)
+        assert.equal(res, -1)
+      })
+      it("Sollte 2 zurückgeben, da nur 'e's vorkommen", function () {
+        const input = "eeeeeeee"
+        const res = funcs.aufgabe14(input)
+        assert.equal(res, 2)
+      })
+      it("Sollte Leerzeichen beachten und auch mitzählen", function () {
+        const input = "Hier ist mehr Text mit vielen 'e's"
+        const res = funcs.aufgabe14(input)
+        assert.equal(res, 15)
+      })
+      it("Sollte nicht auf grosse 'E's reagieren", function () {
+        const input = "EEEEeEee"
+        const res = funcs.aufgabe14(input)
+        assert.equal(res, 7)
+      })
+    })
+
+    describe("Aufgabe 15", function () {
+      it("Die Funktion 'aufgabe15()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe15, "function")
+      })
+      it("Sollte nach dem ersten ' ' abbrechen", function () {
+        const input = "Hier ist langer Text"
+        const res = funcs.aufgabe15(input)
+        assert.equal(res, "Hier")
+      })
+      it("Sollte leer sein wenn es mit einem Leerschlag beginnt", function () {
+        const input = " nichts"
+        const res = funcs.aufgabe15(input)
+        assert.equal(res, "")
+      })
+      it("Sollte '_' ganz normal lesen", function () {
+        const input = "Hier_ist_langer_Text."
+        const res = funcs.aufgabe15(input)
+        assert.equal(res, "Hier_ist_langer_Text.")
+      })
+      it("Sollte das Leerzeichen am Ende nicht mitnehmen", function () {
+        const input = "Ohne Leerzeichen "
+        const res = funcs.aufgabe15(input)
+        assert.equal(res, "Ohne Leerzeichen")
+      })
+    })
   }
 }
