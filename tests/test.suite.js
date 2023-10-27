@@ -414,5 +414,165 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(res, "Ohne Leerzeichen")
       })
     })
+    describe("Aufgabe 16", function () {
+      it("Die Funktion 'aufgabe16()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe16, "function")
+      })
+      it("Sollte nichts einlesen", function () {
+        const input = "$alles wird ignoriert."
+        const res = funcs.aufgabe16(input)
+        assert.equal(res, ["", "alles wird ignoriert."])
+      })
+      it("Sollte alles einlesen", function () {
+        const input = "alles wird eingelesen$"
+        const res = funcs.aufgabe16(input)
+        assert.equal(res, ["alles wird eingelesen"])
+      })
+      it("Sollte nur einen Teil einlesen", function () {
+        const input = "Sollte nur bis hier$einlesen."
+        const res = funcs.aufgabe16(input)
+        assert.equal(res, ["Sollte nur bis hier", "einlesen."])
+      })
+      it("Sollte leer sein", function () {
+        const input = ""
+        const res = funcs.aufgabe16(input)
+        assert.equal(res, [""])
+      })
+      it("Sollte alles einlesen", function () {
+        const input = "alles"
+        const res = funcs.aufgabe16(input)
+        assert.equal(res, ["alles"])
+      })
+      it("Sollte nur 2 Einträge in der Liste haben", function () {
+        const input = "eins$zwei$drei"
+        const res = funcs.aufgabe16(input)
+        assert.equal(res, ["eins", "zwei$drei"])
+      })
+    })
+    describe("Aufgabe 17", function () {
+      it("Die Funktion 'aufgabe17()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe17, "function")
+      })
+      it("Sollte eine Liste mit dem leeren Element haben", function () {
+        const input = ""
+        const res = funcs.aufgabe17(input)
+        assert.equal(res, [""])
+      })
+      it("Sollte eine Liste mit nur einem Eintrag haben", function () {
+        const input = "nur ein Eintrag"
+        const res = funcs.aufgabe17(input)
+        assert.equal(res, ["nur ein Eintrag"])
+      })
+      it("Sollte 2 Einträge haben", function () {
+        const input = "eins,zwei"
+        const res = funcs.aufgabe17(input)
+        assert.equal(res, ["eins", "zwei"])
+      })
+      it("Sollte 3 Einträge haben", function () {
+        const input = "eins,zwei,drei"
+        const res = funcs.aufgabe17(input)
+        assert.equal(res, ["eins", "zwei", "drei"])
+      })
+      it("Sollte nur 2 Einträge haben", function () {
+        const input = "eins,zwei,"
+        const res = funcs.aufgabe17(input)
+        assert.equal(res, ["eins", "zwei"])
+      })
+    })
+    describe("Aufgabe 18", function () {
+      it("Die Funktion 'aufgabe18()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe18, "function")
+      })
+      it("Sollte 'Sie heissen Julia und sind 17 Jahre alt' schreiben", function () {
+        const input = "Julia 17"
+        const res = funcs.aufgabe18(input)
+        assert.equal(res, "Sie heissen Julia und sind 17 Jahre alt")
+      })
+      it("Sollte 'Sie heissen 17 und sind Julia Jahre alt' schreiben", function () {
+        const input = "17 Julia"
+        const res = funcs.aufgabe18(input)
+        assert.equal(res, "Sie heissen 17 und sind Julia Jahre alt")
+      })
+      it("Sollte 'Sie heissen und sind 17 Jahre alt' schreiben", function () {
+        const input = " 17"
+        const res = funcs.aufgabe18(input)
+        assert.equal(res, "Sie heissen und sind 17 Jahre alt")
+      })
+      it("Sollte 'Sie heissen Julia und sind Jahre alt' schreiben", function () {
+        const input = "Julia"
+        const res = funcs.aufgabe18(input)
+        assert.equal(res, "Sie heissen Julia und sind Jahre alt")
+      })
+    })
+    describe("Aufgabe 19", function () {
+      it("Die Funktion 'aufgabe19()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe19, "function")
+      })
+      it("Sollte immernoch leer sein", function () {
+        const input = ""
+        const res = funcs.aufgabe19(input)
+        assert.equal(res, "")
+      })
+      it("Sollte 'aa' heissen", function () {
+        const input = "a"
+        const res = funcs.aufgabe19(input)
+        assert.equal(res, "aa")
+      })
+      it("Sollte mehrere Zeichen verdoppeln", function () {
+        const input = "ab cde"
+        const res = funcs.aufgabe19(input)
+        assert.equal(res, "aabb  ccddee")
+      })
+    })
+    describe("Aufgabe 20", function () {
+      it("Die Funktion 'aufgabe20()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe20, "function")
+      })
+      it("Sollte 'false' sein", function () {
+        const input = "So nicht.Es braucht hier einen Leerschlag"
+        const res = funcs.aufgabe20(input)
+        assert.equal(res, false)
+      })
+      it("Sollte 'true' sein", function () {
+        const input = "So gehts. Nach einem Punkt kommt ein Leerzeichen"
+        const res = funcs.aufgabe20(input)
+        assert.equal(res, true)
+      })
+      it("Auch am Ende braucht es einen Leerschlag", function () {
+        const input = "Auch am Ende."
+        const res = funcs.aufgabe20(input)
+        assert.equal(res, false)
+      })
+      it("Am Ende richtig", function () {
+        const input = "Auch am Ende. "
+        const res = funcs.aufgabe20(input)
+        assert.equal(res, true)
+      })
+    })
+    describe("Aufgabe 21", function () {
+      it("Die Funktion 'aufgabe21()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe21, "function")
+      })
+      it("Sollte leer bleiben", function () {
+        const input = ""
+        const res = funcs.aufgabe21(input)
+        assert.equal(res, "")
+      })
+      it("Sollte ein einzelnes Zeichen behalten", function () {
+        const input = "a"
+        const res = funcs.aufgabe21(input)
+        assert.equal(res, "a")
+      })
+      it("Sollte mehrere gleiche Zeichen behalten", function () {
+        const input = "aaaa"
+        const res = funcs.aufgabe21(input)
+        assert.equal(res, "aaaa")
+      })
+      it("Sollte Grossbuchstaben unterscheiden", function () {
+        const input = "aAaa"
+        const res = funcs.aufgabe21(input)
+        assert.equal(res, "aaAa")
+      })
+    })
   }
 }
