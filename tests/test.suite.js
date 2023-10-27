@@ -704,5 +704,66 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(res, "Aabcdef")
       })
     })
+
+    describe("Aufgabe 27", function () {
+      it("Die Funktion 'aufgabe27()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe27, "function")
+      })
+      it("Sollte eine Zahl sein", function () {
+        const input = "12"
+        const res = funcs.aufgabe27(input)
+        assert.equal(res, true)
+      })
+      it("Sollte keine Zahl sein", function () {
+        const input = "1 2"
+        const res = funcs.aufgabe27(input)
+        assert.equal(res, false)
+      })
+      it("Sollte keine Zahl sein", function () {
+        const input = ""
+        const res = funcs.aufgabe27(input)
+        assert.equal(res, false)
+      })
+      it("Sollte keine Zahl sein", function () {
+        const input = "zwei"
+        const res = funcs.aufgabe27(input)
+        assert.equal(res, false)
+      })
+      it("Sollte kein Leerzeichen am Anfang haben", function () {
+        const input = " 12"
+        const res = funcs.aufgabe27(input)
+        assert.equal(res, false)
+      })
+      it("Sollte kein Leerzeichen am Ende haben", function () {
+        const input = "10 "
+        const res = funcs.aufgabe27(input)
+        assert.equal(res, false)
+      })
+      it("Soll nur ganze Zahlen lesen", function () {
+        const input = "27.1"
+        const res = funcs.aufgabe27(input)
+        assert.equal(res, false)
+      })
+    })
+    describe("Aufgabe 28", function () {
+      it("Die Funktion 'aufgabe28()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe28, "function")
+      })
+      it("Sollte 2 Zahlen haben, und diese addieren", function () {
+        const input = "3 8"
+        const res = funcs.aufgabe28(input)
+        assert.equal(res, 11)
+      })
+      it("Sollte nur auf Leerzeichen reagieren", function () {
+        const input = "3 + 2"
+        const res = funcs.aufgabe28(input)
+        assert.equal(res, null)
+      })
+      it("Sollte auch mit mehrstelligen Zahlen rechnen", function () {
+        const input = "12 600"
+        const res = funcs.aufgabe28(input)
+        assert.equal(res, 612)
+      })
+    })
   }
 }
