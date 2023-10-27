@@ -81,9 +81,45 @@ wobei `name` und `alter` durch Eingaben eingesetzt werden.
 
 ## Aufgabe 19
 
+Jedes Zeichen in der Eingabe soll verdoppelt werden.
+
+## Augabe 20
+
+Prüfen Sie ob nach jedem `.` ein Leerschlag kommt.
+
+## Aufgabe 21
+
+Kehren Sie die Eingabe um.
+
+## Aufgabe 22
+
+Es sollen alle Zeichen aus der Eingabe mit `_` ersetzt werden, bis zum ersten
+`k`.
+
+## Aufgabe 23
+
+Das erste Zeichen der Eingabe soll zusätzlich ganz vorne und ganz hinten an der
+Ausgabe angehängt werden.
+
+## Aufgabe 24
+
+Das erste und das letzte Zeichen der Eingabe sollen vertauscht werden.
+
+## Aufgabe 25
+
+Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl Zeichen
+gerade ist, sollen die beiden mittleren Zeichen gelöscht werden.
+
+## Aufgabe 26
+
+Vergleichen Sie die ersten beiden Zeichen der Eingabe und vertauschen Sie diese
+so dass Sie alphanumerisch sortiert sind.
+
+## Aufgabe 27
+
 Testen sie, ob eine Eingabe eine Zahl ist.
 
-## Aufgabe 20
+## Aufgabe 28
 
-Testen Sie, ob zwei Eingaben Zahlen sind und falls ja geben Sie die Summe als
-Ausgabe aus; sonst Fehlermeldung.
+Testen Sie, ob in der Eingabe 2 Zahlen von einem Leerzeichen getrennt sind.
+Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
