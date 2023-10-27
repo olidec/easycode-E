@@ -574,5 +574,45 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(res, "aaAa")
       })
     })
+    describe("Aufgabe 22", function () {
+      it("Die Funktion 'aufgabe22()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe22, "function")
+      })
+      it("Sollte alles ersetzen", function () {
+        const input = "Alles weg..."
+        const res = funcs.aufgabe22(input)
+        assert.equal(res, "____________")
+      })
+      it("Sollte einen Teil ersetzen", function () {
+        const input = "alles bis kier ist weg"
+        const res = funcs.aufgabe22(input)
+        assert.equal(res, "__________kier ist weg")
+      })
+      it("Sollte nichts ersetzen", function () {
+        const input = "keine Unterstriche..."
+        const res = funcs.aufgabe22(input)
+        assert.equal(res, "keine Unterstriche...")
+      })
+    })
+    describe("Aufgabe 23", function () {
+      it("Die Funktion 'aufgabe23()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe23, "function")
+      })
+      it("Bleibt leer", function () {
+        const input = ""
+        const res = funcs.aufgabe23(input)
+        assert.equal(res, "")
+      })
+      it("Verdoppelt das erste Zeichen", function () {
+        const input = "a"
+        const res = funcs.aufgabe23(input)
+        assert.equal(res, "aaa")
+      })
+      it("Verdoppelt das erste Zeichen", function () {
+        const input = "abc"
+        const res = funcs.aufgabe23(input)
+        assert.equal(res, "aabca")
+      })
+    })
   }
 }
