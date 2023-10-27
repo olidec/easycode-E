@@ -614,5 +614,95 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(res, "aabca")
       })
     })
+    describe("Aufgabe 24", function () {
+      it("Die Funktion 'aufgabe24()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe24, "function")
+      })
+      it("Sollte leer bleiben", function () {
+        const input = ""
+        const res = funcs.aufgabe24(input)
+        assert.equal(res, "")
+      })
+      it("Sollte gleich bleiben", function () {
+        const input = "a"
+        const res = funcs.aufgabe24(input)
+        assert.equal(res, "a")
+      })
+      it("Sollte gleich bleiben", function () {
+        const input = "aa"
+        const res = funcs.aufgabe24(input)
+        assert.equal(res, "aa")
+      })
+      it("Sollte vertauschen", function () {
+        const input = "ab"
+        const res = funcs.aufgabe24(input)
+        assert.equal(res, "ba")
+      })
+      it("Sollte nur den Anfang und Schluss vertauschen", function () {
+        const input = "abcdef"
+        const res = funcs.aufgabe24(input)
+        assert.equal(res, "fbcdea")
+      })
+      it("Sollte auch Leerzeichen vertauschen", function () {
+        const input = "abcd "
+        const res = funcs.aufgabe24(input)
+        assert.equal(res, " bcda")
+      })
+    })
+    describe("Aufgabe 25", function () {
+      it("Die Funktion 'aufgabe25()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe25, "function")
+      })
+      it("Sollte leer bleiben", function () {
+        const input = ""
+        const res = funcs.aufgabe25(input)
+        assert.equal(res, "")
+      })
+      it("Soll leer werden", function () {
+        const input = "a"
+        const res = funcs.aufgabe25(input)
+        assert.equal(res, "")
+      })
+      it("Soll leer werden", function () {
+        const input = "aa"
+        const res = funcs.aufgabe25(input)
+        assert.equal(res, "")
+      })
+      it("Soll 1 Zeichen löschen", function () {
+        const input = "abc"
+        const res = funcs.aufgabe25(input)
+        assert.equal(res, "ac")
+      })
+      it("Soll 2 Zeichen löschen", function () {
+        const input = "abcd"
+        const res = funcs.aufgabe25(input)
+        assert.equal(res, "ad")
+      })
+      it("Soll gleiche Zeichen separat behandeln", function () {
+        const input = "abbc"
+        const res = funcs.aufgabe25(input)
+        assert.equal(res, "ac")
+      })
+    })
+    describe("Aufgabe 26", function () {
+      it("Die Funktion 'aufgabe26()' soll existieren", function () {
+        assert.equal(typeof funcs.aufgabe26, "function")
+      })
+      it("Soll die ersten beiden Zeichen so lassen", function () {
+        const input = "abcde"
+        const res = funcs.aufgabe26(input)
+        assert.equal(res, "abcde")
+      })
+      it("Soll die ersten beiden Zeichen vertauschen", function () {
+        const input = "bacdef"
+        const res = funcs.aufgabe26(input)
+        assert.equal(res, "abcdef")
+      })
+      it("Soll Grossbuchstaben nach vorne nehmen", function () {
+        const input = "aAbcdef"
+        const res = funcs.aufgabe26(input)
+        assert.equal(res, "Aabcdef")
+      })
+    })
   }
 }
