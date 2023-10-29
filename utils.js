@@ -17,7 +17,7 @@ export function print(args) {
       : false
   var oldContent = element.textContent
   element.textContent = `${oldContent}\n> ${args}`
-  if (scrollToBottom) {
+  if (true /*scrollToBottom*/) {
     element.scrollTop = element.scrollHeight
   }
 }
@@ -63,9 +63,20 @@ export function decreaseOutputHeight() {
   const cssRoot = document.querySelector(":root")
   const rootStyles = getComputedStyle(cssRoot)
   let currentFontSize = rootStyles.getPropertyValue("--output-height")
-  currentFontSize = currentFontSize.split("px")[0]
+  currentFontSize = currentFontSize.split("vh")[0]
   cssRoot.style.setProperty(
     "--output-height",
-    `${parseInt(currentFontSize) - 20}px`,
+    `${parseInt(currentFontSize) - 2}vh`,
+  )
+}
+
+export function increaseOutputHeight() {
+  const cssRoot = document.querySelector(":root")
+  const rootStyles = getComputedStyle(cssRoot)
+  let currentFontSize = rootStyles.getPropertyValue("--output-height")
+  currentFontSize = currentFontSize.split("vh")[0]
+  cssRoot.style.setProperty(
+    "--output-height",
+    `${parseInt(currentFontSize) + 2}vh`,
   )
 }

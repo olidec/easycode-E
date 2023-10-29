@@ -5,16 +5,49 @@
 }
 
 :root {
-  --output-height: 300px;
+  --output-height: 20vh;
   --output-header-height: 40px;
   --output-font-size: 20pt;
+  --bg-color: #222;
+  --fg-color: #fff;
+  --header-height: 80px;
+  --input-panel-height: 30vh;
+  --mocha-height: calc(
+    100vh - var(--input-panel-height) - var(--header-height) -
+      var(--output-height)
+  );
 }
 
 body {
   margin: 0;
   padding: 0;
+  padding-top: var(--header-height);
   position: relative;
-  padding-bottom: var(--output-height);
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  overflow-y: hidden;
+}
+
+body::after {
+  position: fixed;
+  height: calc(var(--header-height) - 10px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "Tests:";
+  z-index: 0;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 2px solid whitesmoke;
+}
+
+#input-panel {
+  height: var(--input-panel-height);
+  overflow-y: auto;
 }
 
 #output {
@@ -26,15 +59,11 @@ body {
   background-color: grey;
   color: white;
   font-family: monospace;
-  position: fixed;
-  top: calc(100vh - var(--output-height) - var(--output-header-height));
-  z-index: 10;
 }
 
 #output-content {
   font-size: var(--output-font-size);
-  position: relative;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: calc(var(--output-height) - var(--output-header-height));
   margin: 0;
   padding: 0;
@@ -53,10 +82,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1em;
+  margin-right: 20px;
 }
 
 #output-header > .ctrl-buttons > span.btn {
   font-size: 1.5rem;
+  font-weight: bolder;
   color: white;
   cursor: pointer;
 }
@@ -85,4 +116,24 @@ button {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+#mocha {
+  height: var(--mocha-height);
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  border-top: 2px solid var(--fg-color);
+}
+
+#mocha h3 {
+  text-align: center;
+  background-color: #555;
+  padding: 10px 0;
+  margin: 0;
+}
+
+#mocha-stats em,
+#mocha-stats .progress {
+  color: var(--fg-color);
 }

@@ -1,5 +1,3 @@
-import { aufgabe01 } from "../script"
-
 export function testSuite({ assert, funcs, APP }) {
   function nit(description, callback) {
     it(description, function () {

@@ -1,21 +1,10 @@
 export function aufgabe01(args) {
-  let input = args
-  return `Hello ${input}`
-}
+  const input = args
+  const result = []
 
-export function sayHello() {}
-
-export function changeBackground() {}
-
-export function deleteText() {}
-
-export function incrementCounter() {}
-export function decrementCounter() {}
-export function resetCounter() {}
-
-export function writeText() {}
-
-export function aufgabe08(args) {
-  let input = args
-  return args.toLowerCase()
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  return result.join("")
 }
