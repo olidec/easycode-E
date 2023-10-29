@@ -51,7 +51,6 @@ body::after {
 }
 
 #output {
-  white-space: pre-line;
   padding: 0 0 0 20px;
   border: 1px solid black;
   height: calc(var(--output-height) + var(--output-header-height));
@@ -62,6 +61,7 @@ body::after {
 }
 
 #output-content {
+  white-space: pre-line;
   font-size: var(--output-font-size);
   overflow-y: auto;
   height: calc(var(--output-height) - var(--output-header-height));
@@ -70,6 +70,7 @@ body::after {
 }
 
 #output-header {
+  white-space: pre-line;
   height: var(--output-header-height);
   display: flex;
   flex-direction: row;

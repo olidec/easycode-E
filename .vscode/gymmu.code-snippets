@@ -3,17 +3,38 @@
 		"scope": "javascript,typescript",
 		"prefix": "log",
 		"body": [
-			"console.log('$1');",
-			"$2"
+			"console.log(${1})",
+			"${0}"
 		],
 		"description": "Log output to console"
+	},
+	"[gymmu] Print to website console": {
+		"scope": "javascript",
+		"prefix": "print",
+		"body": [
+			"print($1)",
+			"${0}"
+		],
+		"description": "print output to console"
+	},
+	"[gymmu] Document-QuerySelector": {
+		"scope": "javascript",
+		"prefix": "qs",
+		"body": [
+			"const ${1:id}Element = document.querySelector(\"#${1}\")",
+			"${0}" 
+		],
+		"description": "Hole ein Element aus der Webseite mit einer ID"
 	},
 	"[gymmu] Create a function": {
 		"scope": "javascript",
 		"prefix": "func",
 		"body": [
-			"function ${1:name}() {",
+			"export function ${1:aufgabe} (args) {",
+			"	const input = args",
+			"	const result = []"
 			"	${0}",
+			"	return result.join(\"\")",
 			"}"
 		],
 		"description": "A javascript function."
@@ -26,6 +47,16 @@
 		],
 		"description": "Erstellt einen Button mit einer onclick Funktion."
 	},
+	"[gymmu] for-Schleife": {
+		"scope": "javascript",
+		"prefix": "for",
+		"body": [
+			"for (let i = 0; i < ${1:input}.length; i++) {",
+			"	const currentElement = ${1}[i]",
+			"	${0}"
+			"}"
+		]
+	}
 	"[gymmu-admin] Testfall": {
 		"scope": "javascript",
 		"prefix": "it",

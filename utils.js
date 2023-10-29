@@ -80,3 +80,8 @@ export function increaseOutputHeight() {
     `${parseInt(currentFontSize) + 2}vh`,
   )
 }
+
+export function clearConsole() {
+  const consoleElement = document.querySelector("#output-content")
+  consoleElement.textContent = ">"
+}
