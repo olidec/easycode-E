@@ -9,23 +9,20 @@ export function testSuite({ assert, funcs, APP }) {
     })
   }
 
-  if (APP.type === "address") {
-    describe("Vorname korrekt", function () {
-      it("Die Funktion 'addressCheckFirstname()' soll existieren", function () {
-        assert.equal(typeof funcs.addressCheckFirstname, "function")
+  if (APP.type === "sort") {
+    describe("Bubble Sort", function () {
+      it("Die Funktion 'bubbleSort()' soll existieren", function () {
+        assert.equal(typeof funcs.bubbleSort, "function")
       })
-      it("Die Funktion 'addressCheckFirstname()' soll existieren", function () {
-        assert.equal(typeof funcs.addressCheckFirstname, "function")
+      it("Sollte den Text sortieren", function () {
+        const input = "cdefab"
+        const res = funcs.bubbleSort(input)
+        assert.equal(res, "abcdef")
       })
-      it("Falsch wenn Vorname leer ist", function () {
-        const input = ""
-        const res = funcs.addressCheckFirstname(input)
-        assert.equal(res, false)
-      })
-      it("Richtig wenn Vorname länger wie ein Zeichen ist", function () {
-        const input = "C"
-        const res = funcs.addressCheckFirstname(input)
-        assert.equal(res, true)
+      it("Sollte Grossbuchstaben for Kleinbuchstaben haben", function () {
+        const input = "aAbCdEEe"
+        const res = funcs.bubbleSort(input)
+        assert.equal(res, "ACEEabde")
       })
     })
   } else {
