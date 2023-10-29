@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="helper.js" type="module"></script>
+  </head>
+
+  <body>
+    <div id="input-panel">
+      <h1>Palindrome erkennen</h1>
+
+      <input
+        tabindex="1"
+        id="input"
+        type="text"
+        placeholder="Eingabe..."
+        value="einfach nur text..." />
+
+      <div class="button-container">
+        <!-- TODO: Hier neue Buttons erstellen. -->
+        <button type="button" onclick="$(countPalindroms)">
+          Palindrome zählen
+        </button>
+        <button type="button" onclick="$(listPalindroms)">
+          Palindrome auflisten
+        </button>
+      </div>
+
+      <section>
+        <h3>Finde alle Palindrome in dem folgenden Text</h3>
+        <div id="palindrom-text">
+          Palindromes are fascinating linguistic gems. They read the same way
+          forwards and backwards, creating a sense of symmetry in language.
+          Palindromes come in many forms, from simple words like "radar" to
+          complex phrases like "A man, a plan, a canal, Panama!" These wordplay
+          wonders never fail to amuse and intrigue.
+          <br />
+          Palindrome enthusiasts often enjoy crafting their own palindromic
+          creations. These word aficionados aim to create sentences and phrases
+          that are both meaningful and palindromic. While it can be a
+          challenging endeavor, it's also a rewarding one, resulting in clever
+          linguistic puzzles.
+          <br />
+          Palindrome phrases can even be found in literature, adding an element
+          of surprise and delight. The use of palindromes in storytelling can be
+          a clever literary device, leaving readers with a sense of wonder and
+          amusement. These "word games" enrich the reading experience and
+          showcase the creativity of authors.
+          <br />
+          In mathematics, palindromic numbers are another intriguing facet of
+          this phenomenon. Numbers like 121, 1331, and 12321 read the same
+          forwards and backwards. These numerical palindromes can be found in
+          various number bases and often serve as a playful challenge for math
+          enthusiasts.
+          <br />
+          Palindrome dates, like "02/02/2020" and "12/11/21," generate
+          excitement when they occur. These dates are celebrated for their
+          symmetry and provide a unique numerical touch to special occasions.
+          <br />
+          Even in names, palindromes can be found. Popular names like "Hannah"
+          and "Anna" are palindromes that carry a certain elegance and charm, in
+          addition to their linguistic quirk.
+          <br />
+          Palindrome appreciation transcends borders, and enthusiasts worldwide
+          find joy in discovering and creating these word wonders. They showcase
+          the beauty of language and the creativity of the human mind.
+          Palindromes are, quite simply, a delightful linguistic curiosity that
+          brings smiles to faces, whether read in English, French, German, or
+          any other language.
+        </div>
+      </section>
+    </div>
+
+    <div id="mocha">
+      <h3>Tests</h3>
+    </div>
+
+    <div id="output">
+      <div id="output-header">
+        <div class="ctrl-buttons">
+          <span class="btn" onclick="increaseFontSize()">+</span>
+          <span class="btn" onclick="decreaseFontSize()">-</span>
+          <span class="btn" onclick="increaseOutputHeight()">&#x21A5;</span>
+          <span class="btn" onclick="decreaseOutputHeight()">&#x21A7;</span>
+        </div>
+      </div>
+      <div id="output-content">></div>
+    </div>
+
+    <script>
+      window.APP_TYPE = "palindrom"
+    </script>
+    <script type="module" src="tests/run.js"></script>
+  </body>
+</html>

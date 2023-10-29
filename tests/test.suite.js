@@ -25,6 +25,27 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(res, "ACEEabde")
       })
     })
+  } else if (APP.type === "palindrom") {
+    describe("Palindrome", function () {
+      it("Die Funktion 'checkPalindrom()' soll existieren", function () {
+        assert.equal(typeof funcs.checkPalindrom, "function")
+      })
+      it("Anna ist ein Palindrom", function () {
+        const input = "Anna"
+        const res = funcs.checkPalindrom(input)
+        assert.equal(res, true)
+      })
+      it("'An a' ist ein Palindrom", function () {
+        const input = "An a"
+        const res = funcs.checkPalindrom(input)
+        assert.equal(res, true)
+      })
+      it("'Hanna' ist kein Palindrom", function () {
+        const input = "Hanna"
+        const res = funcs.checkPalindrom(input)
+        assert.equal(res, false)
+      })
+    })
   } else {
     describe("Aufgabe 01", function () {
       it("Die Funktion 'aufgabe01()' soll existieren", function () {
