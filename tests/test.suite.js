@@ -121,23 +121,23 @@ export function testSuite({ assert, funcs, APP }) {
       })
       it("Sollte 2 Wörter zählen", function () {
         const input = "Zwei Wörter"
-        const res = funcs.aufgabe03(input)
+        const res = funcs.aufgabe04(input)
         assert.equal(res, 2)
       })
       it("Sollte 4 Wörter zählen", function () {
         const input = "Nur vier Wörter hier."
-        const res = funcs.aufgabe03(input)
+        const res = funcs.aufgabe04(input)
         assert.equal(res, 4)
       })
       it("Kann auch mit Sonderzeichen umgehen", function () {
         const input =
           "Nicht alles - was von Leerzeichen getrennt wird, sind Wörter..."
-        const res = funcs.aufgabe03(input)
+        const res = funcs.aufgabe04(input)
         assert.equal(res, 9)
       })
       it("Zählt auch Zahlen als Wörter", function () {
         const input = "Nur vier Wörter hier."
-        const res = funcs.aufgabe03(input)
+        const res = funcs.aufgabe04(input)
         assert.equal(res, 4)
       })
     })
