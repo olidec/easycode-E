@@ -1,125 +1,115 @@
 # Easycode
 
-Einfaches Repository um Javascript zu lernen.
+Simple repository to learn JavaScript.
 
-## Aufgabe 01
+## Exercise 01
 
-Schreibe eine Funktion, die aus einem vorgegebenen Text alle `e`s löscht.
+Write a function that removes all `e`s from a given text.
 
-## Aufgabe 02
+## Exercise 02
 
-Alles gross schreiben.
+Convert everything to uppercase.
 
-## Aufgabe 03
+## Exercise 03
 
-Zähle alle `e`s in einem Text.
+Count all `e`s in a text.
 
-## Aufgabe 04
+## Exercise 04
 
-Zähle alle Wörter in einem Text.
+Count all words in a text.
 
-## Aufgabe 05
+## Exercise 05
 
-Schreibe eine Funktion, die testet, ob in einem Text mindestens ein
-Grossbuchstabe vorkommt.
+Write a function that tests whether at least one capital letter appears in a text.
 
-## Aufgabe 06
+## Exercise 06
 
-Schreibe eine Funktion, die testet, ob in einem Text mindestens ein
-Sonderzeichen vorkommt.
+Write a function that tests whether at least one special character appears in a text.
 
-## Aufgabe 07
+## Exercise 07
 
-Schreibe eine Funktion, die testet, ob in einem Text das Wort 'und' vorkommt.
+Write a function that tests whether the word 'and' appears in a text.
 
-## Aufgabe 08
+## Exercise 08
 
-Ersetze alle `e`s mit einer `3`.
+Replace all `e`s with a `3`.
 
-## Aufgabe 09
+## Exercise 09
 
-Teste ob eine Eingabe genau sechs Zeichen lang ist.
+Test if an input is exactly six characters long.
 
-## Aufgabe 10
+## Exercise 10
 
-Teste ob eine Eingabe ein korrekter RGB Hexcode ist.
+Test if an input is a correct RGB hex code.
 
-## Aufgabe 11
+## Exercise 11
 
-Gib den ASCII code eines einzelnen Buchstabens an.
+Provide the ASCII code of a single letter.
 
-## Aufgabe 12
+## Exercise 12
 
-Suche die Position des ersten `e`s in einem Text.
+Find the position of the first `e` in a text.
 
-## Aufgabe 13
+## Exercise 13
 
-Suche die Position des letzten `e`s in einem Text.
+Find the position of the last `e` in a text.
 
-## Aufgabe 14
+## Exercise 14
 
-Suche die Position des dritten `e`s in einem Text.
+Find the position of the third `e` in a text.
 
-## Aufgabe 15
+## Exercise 15
 
-Lesen Sie die Eingabe nur bis zum ersten Leerzeichen ein.
+Read the input only up to the first space.
 
-## Aufgabe 16
+## Exercise 16
 
-Lesen Sie die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und
-den Rest als den zweiten Teil.
+Read the input as a list, with the first part separated by a '$' character, and the rest as the second part.
 
-## Aufgabe 17
+## Exercise 17
 
-Lesen Sie die Eingabe als Liste ein, Einträge in der Liste werden von einem ','
-getrennt.
+Read the input as a list, with entries separated by a ','.
 
-## Aufgabe 18
+## Exercise 18
 
-Schreiben Sie folgende Ausgabe: Sie heissen `name` und sind `alter` Jahre alt,
-wobei `name` und `alter` durch Eingaben eingesetzt werden.
+Write the following output: "Your name is `name` and you are `age` years old." where `name` and `age` are replaced by inputs.
 
-## Aufgabe 19
+## Exercise 19
 
-Jedes Zeichen in der Eingabe soll verdoppelt werden.
+Duplicate each character in the input.
 
-## Augabe 20
+## Exercise 20
 
-Prüfen Sie ob nach jedem `.` ein Leerschlag kommt.
+Check if there is a space after each period (full stop).
 
-## Aufgabe 21
+## Exercise 21
 
-Kehren Sie die Eingabe um.
+Reverse the input.
 
-## Aufgabe 22
+## Exercise 22
 
-Es sollen alle Zeichen aus der Eingabe mit `_` ersetzt werden, bis zum ersten
-`k`.
+Replace all characters in the input with '_' until the first 'k'.
 
-## Aufgabe 23
+## Exercise 23
 
-Das erste Zeichen der Eingabe soll zusätzlich ganz vorne und ganz hinten an der
-Ausgabe angehängt werden.
+The first character of the input should also be appended to the beginning and end of the output.
 
-## Aufgabe 24
+## Exercise 24
 
-Das erste und das letzte Zeichen der Eingabe sollen vertauscht werden.
+Swap the first and last characters of the input.
 
-## Aufgabe 25
+## Exercise 25
 
-Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl Zeichen
-gerade ist, sollen die beiden mittleren Zeichen gelöscht werden.
+Delete the middle character of the input. If the number of characters is even, delete the two middle characters.
 
-## Aufgabe 26
+## Exercise 26
 
-Vergleichen Sie die ersten beiden Zeichen der Eingabe und vertauschen Sie diese
-so dass Sie alphanumerisch sortiert sind.
+Compare the first two characters of the input and swap them so that they are sorted alphabetically.
 
-## Aufgabe 27
+## Exercise 27
 
-Testen sie, ob eine Eingabe eine Zahl ist.
+Test whether an input is a number.
 
-## Aufgabe 28
+## Exercise 28
 
-Testen Sie, ob in der Eingabe 2 Zahlen von einem Leerzeichen getrennt sind.
-Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
+Test whether there are two numbers separated by a space in the input. If so, output the sum; otherwise, display an error message.

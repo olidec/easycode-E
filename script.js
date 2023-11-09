@@ -1,4 +1,4 @@
-export function aufgabe01(args) {
+export function exercise01(args) {
   const input = args
   const result = []
 
