@@ -509,12 +509,12 @@ export function testSuite({ assert, funcs, APP }) {
         const res = funcs.exercise18(input)
         assert.equal(res, "Your name is 17 and you are Julia years old.")
       })
-      it("Sollte 'Your name is and you are 17 years old' write", function () {
+      it("Should write 'Your name is and you are 17 years old'", function () {
         const input = " 17"
         const res = funcs.exercise18(input)
         assert.equal(res, "Your name is and you are 17 years old.")
       })
-      it("Sollte 'Your name is Julia and you are years old' write", function () {
+      it("Should write 'Your name is Julia and you are years old'", function () {
         const input = "Julia"
         const res = funcs.exercise18(input)
         assert.equal(res, "Your name is Julia and you are years old.")
@@ -524,17 +524,17 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise19()' must exist.", function () {
         assert.equal(typeof funcs.exercise19, "function")
       })
-      it("Sollte immernoch leer sein", function () {
+      it("Should still be empty", function () {
         const input = ""
         const res = funcs.exercise19(input)
         assert.equal(res, "")
       })
-      it("Sollte 'aa' heissen", function () {
+      it("Should be 'aa'", function () {
         const input = "a"
         const res = funcs.exercise19(input)
         assert.equal(res, "aa")
       })
-      it("Sollte mehrere Zeichen verdoppeln", function () {
+      it("Should duplicate several characters", function () {
         const input = "ab cde"
         const res = funcs.exercise19(input)
         assert.equal(res, "aabb  ccddee")
@@ -544,23 +544,23 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise20()' must exist.", function () {
         assert.equal(typeof funcs.exercise20, "function")
       })
-      it("Sollte 'false' sein", function () {
-        const input = "So nicht.Es braucht hier einen Leerschlag"
+      it("Should be 'false'", function () {
+        const input = "Not like this.It needs a space here."
         const res = funcs.exercise20(input)
         assert.equal(res, false)
       })
-      it("Sollte 'true' sein", function () {
-        const input = "So gehts. Nach einem Punkt kommt ein Leerzeichen"
+      it("Should be 'true'", function () {
+        const input = "This is how it works. There is a space after a period"
         const res = funcs.exercise20(input)
         assert.equal(res, true)
       })
-      it("Auch am Ende braucht es einen Leerschlag", function () {
-        const input = "Auch am Ende."
+      it("A space is also needed at the end.", function () {
+        const input = "Also at the end."
         const res = funcs.exercise20(input)
         assert.equal(res, false)
       })
-      it("Am Ende richtig", function () {
-        const input = "Auch am Ende. "
+      it("Correct at the end", function () {
+        const input = "Also at the end. "
         const res = funcs.exercise20(input)
         assert.equal(res, true)
       })
@@ -569,22 +569,22 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise21()' must exist.", function () {
         assert.equal(typeof funcs.exercise21, "function")
       })
-      it("Sollte leer bleiben", function () {
+      it("Should remain blank", function () {
         const input = ""
         const res = funcs.exercise21(input)
         assert.equal(res, "")
       })
-      it("Sollte ein einzelnes Zeichen behalten", function () {
+      it("Should keep a single character", function () {
         const input = "a"
         const res = funcs.exercise21(input)
         assert.equal(res, "a")
       })
-      it("Sollte mehrere gleiche Zeichen behalten", function () {
+      it("Should keep several identical characters", function () {
         const input = "aaaa"
         const res = funcs.exercise21(input)
         assert.equal(res, "aaaa")
       })
-      it("Sollte Grossbuchstaben unterscheiden", function () {
+      it("Should distinguish capital letters", function () {
         const input = "aAaa"
         const res = funcs.exercise21(input)
         assert.equal(res, "aaAa")
@@ -594,32 +594,32 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise22()' must exist.", function () {
         assert.equal(typeof funcs.exercise22, "function")
       })
-      it("Sollte alles ersetzen", function () {
-        const input = "Alles weg..."
+      it("Should replace everything", function () {
+        const input = "All gone..."
         const res = funcs.exercise22(input)
         assert.equal(res, "____________")
       })
-      it("Sollte einen Teil ersetzen", function () {
-        const input = "alles bis kier ist weg"
+      it("Should replace one part", function () {
+        const input = "everything up to kere is gone"
         const res = funcs.exercise22(input)
-        assert.equal(res, "__________kier ist weg")
+        assert.equal(res, "__________kere is gone")
       })
-      it("Sollte nichts ersetzen", function () {
-        const input = "keine Unterstriche..."
+      it("Should not replace anything", function () {
+        const input = "kno underlines..."
         const res = funcs.exercise22(input)
-        assert.equal(res, "keine Unterstriche...")
+        assert.equal(res, "kno underlines...")
       })
     })
     describe("exercise 23", function () {
       it("The function 'exercise23()' must exist.", function () {
         assert.equal(typeof funcs.exercise23, "function")
       })
-      it("Bleibt leer", function () {
+      it("Remains empty", function () {
         const input = ""
         const res = funcs.exercise23(input)
         assert.equal(res, "")
       })
-      it("Verdoppelt das erste Zeichen", function () {
+      it("Duplicates the first character", function () {
         const input = "a"
         const res = funcs.exercise23(input)
         assert.equal(res, "aaa")
@@ -634,32 +634,32 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise24()' must exist.", function () {
         assert.equal(typeof funcs.exercise24, "function")
       })
-      it("Sollte leer bleiben", function () {
+      it("Should remain empty", function () {
         const input = ""
         const res = funcs.exercise24(input)
         assert.equal(res, "")
       })
-      it("Sollte gleich bleiben", function () {
+      it("Should stay the same", function () {
         const input = "a"
         const res = funcs.exercise24(input)
         assert.equal(res, "a")
       })
-      it("Sollte gleich bleiben", function () {
+      it("Should stay the same", function () {
         const input = "aa"
         const res = funcs.exercise24(input)
         assert.equal(res, "aa")
       })
-      it("Sollte vertauschen", function () {
+      it("Should swap", function () {
         const input = "ab"
         const res = funcs.exercise24(input)
         assert.equal(res, "ba")
       })
-      it("Sollte nur den Anfang und Schluss vertauschen", function () {
+      it("Should only swap the beginning and end", function () {
         const input = "abcdef"
         const res = funcs.exercise24(input)
         assert.equal(res, "fbcdea")
       })
-      it("Sollte auch Leerzeichen vertauschen", function () {
+      it("Should also swap spaces", function () {
         const input = "abcd "
         const res = funcs.exercise24(input)
         assert.equal(res, " bcda")
@@ -669,32 +669,32 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise25()' must exist.", function () {
         assert.equal(typeof funcs.exercise25, "function")
       })
-      it("Sollte leer bleiben", function () {
+      it("Should remain empty", function () {
         const input = ""
         const res = funcs.exercise25(input)
         assert.equal(res, "")
       })
-      it("Soll leer werden", function () {
+      it("Should become empty", function () {
         const input = "a"
         const res = funcs.exercise25(input)
         assert.equal(res, "")
       })
-      it("Soll leer werden", function () {
+      it("Should become empty", function () {
         const input = "aa"
         const res = funcs.exercise25(input)
         assert.equal(res, "")
       })
-      it("Soll 1 Zeichen löschen", function () {
+      it("Should delete 1 character", function () {
         const input = "abc"
         const res = funcs.exercise25(input)
         assert.equal(res, "ac")
       })
-      it("Soll 2 Zeichen löschen", function () {
+      it("Should delete 2 characters", function () {
         const input = "abcd"
         const res = funcs.exercise25(input)
         assert.equal(res, "ad")
       })
-      it("Soll gleiche Zeichen separat behandeln", function () {
+      it("Should treat identical characters separately", function () {
         const input = "abbc"
         const res = funcs.exercise25(input)
         assert.equal(res, "ac")
@@ -704,17 +704,17 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise26()' must exist.", function () {
         assert.equal(typeof funcs.exercise26, "function")
       })
-      it("Soll die ersten beiden Zeichen so lassen", function () {
+      it("Should leave the first two characters as they are", function () {
         const input = "abcde"
         const res = funcs.exercise26(input)
         assert.equal(res, "abcde")
       })
-      it("Soll die ersten beiden Zeichen vertauschen", function () {
+      it("Should swap the first two characters", function () {
         const input = "bacdef"
         const res = funcs.exercise26(input)
         assert.equal(res, "abcdef")
       })
-      it("Soll Grossbuchstaben nach vorne nehmen", function () {
+      it("Should take upper case letters to the front", function () {
         const input = "aAbcdef"
         const res = funcs.exercise26(input)
         assert.equal(res, "Aabcdef")
@@ -725,37 +725,37 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise27()' must exist.", function () {
         assert.equal(typeof funcs.exercise27, "function")
       })
-      it("Sollte eine Zahl sein", function () {
+      it("Should be a number", function () {
         const input = "12"
         const res = funcs.exercise27(input)
         assert.equal(res, true)
       })
-      it("Sollte keine Zahl sein", function () {
+      it("Should not be a number", function () {
         const input = "1 2"
         const res = funcs.exercise27(input)
         assert.equal(res, false)
       })
-      it("Sollte keine Zahl sein", function () {
+      it("Should not be a number", function () {
         const input = ""
         const res = funcs.exercise27(input)
         assert.equal(res, false)
       })
-      it("Sollte keine Zahl sein", function () {
-        const input = "zwei"
+      it("Should not be a number", function () {
+        const input = "two"
         const res = funcs.exercise27(input)
         assert.equal(res, false)
       })
-      it("Sollte kein Leerzeichen am Anfang haben", function () {
+      it("Should not have a space at the beginning", function () {
         const input = " 12"
         const res = funcs.exercise27(input)
         assert.equal(res, false)
       })
-      it("Sollte kein Leerzeichen am Ende haben", function () {
+      it("Should not have a space at the end", function () {
         const input = "10 "
         const res = funcs.exercise27(input)
         assert.equal(res, false)
       })
-      it("Soll nur ganze Zahlen lesen", function () {
+      it("Should only read integers", function () {
         const input = "27.1"
         const res = funcs.exercise27(input)
         assert.equal(res, false)
@@ -765,17 +765,17 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise28()' must exist.", function () {
         assert.equal(typeof funcs.exercise28, "function")
       })
-      it("Sollte 2 Zahlen haben, und diese addieren", function () {
+      it("Should read 2 numbers and add them together", function () {
         const input = "3 8"
         const res = funcs.exercise28(input)
         assert.equal(res, 11)
       })
-      it("Sollte nur auf Leerzeichen reagieren", function () {
+      it("Should only react to spaces", function () {
         const input = "3 + 2"
         const res = funcs.exercise28(input)
         assert.equal(res, null)
       })
-      it("Sollte auch mit mehrstelligen Zahlen rechnen", function () {
+      it("Should also deal with multi-digit numbers", function () {
         const input = "12 600"
         const res = funcs.exercise28(input)
         assert.equal(res, 612)
