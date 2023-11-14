@@ -56,7 +56,7 @@ export function testSuite({ assert, funcs, APP }) {
         const res = funcs.exercise01(input)
         assert.equal(res, "Hllo")
       })
-      it("Should have no more 'e's in it", function () {
+      it("Should have no more 'E's in it", function () {
         const input = "Emoji"
         const res = funcs.exercise01(input)
         assert.equal(res, "moji")
@@ -82,15 +82,15 @@ export function testSuite({ assert, funcs, APP }) {
         const res = funcs.exercise02(input)
         assert.equal(res, "ABC")
       })
-      it("Should remain capital letters", function () {
+      it("Should keep capital letters", function () {
         const input = "aBc"
         const res = funcs.exercise02(input)
         assert.equal(res, "ABC")
       })
       it("Can also handle special characters", function () {
-        const input = "Hier ist ein Satz mit mehreren Zeichen."
+        const input = "This is a sentence(!) with multiple special characters."
         const res = funcs.exercise02(input)
-        assert.equal(res, "HIER IST EIN SATZ MIT MEHREREN ZEICHEN.")
+        assert.equal(res, "THIS IS A SENTENCE(!) WITH MULTIPLE SPECIAL CHARACTERS.")
       })
     })
 
@@ -98,18 +98,18 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise03()' must exist.", function () {
         assert.equal(typeof funcs.exercise03, "function")
       })
-      it("Should contain 1 'e'", function () {
+      it("Should count 1 'e'", function () {
         const input = "Hello"
         const res = funcs.exercise03(input)
         assert.equal(res, 1)
       })
-      it("Should contain 4 'e's", function () {
-        const input = "ein einfacher Text."
+      it("Should count multiple 'e's", function () {
+        const input = "just a very simple text."
         const res = funcs.exercise03(input)
-        assert.equal(res, 4)
+        assert.equal(res, 3)
       })
       it("Should also count 'E's", function () {
-        const input = "Ein einfacher Text."
+        const input = "Even simpler text."
         const res = funcs.exercise03(input)
         assert.equal(res, 4)
       })
@@ -120,23 +120,23 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(typeof funcs.exercise04, "function")
       })
       it("Should count 2 words", function () {
-        const input = "Zwei Wörter"
+        const input = "Two Words"
         const res = funcs.exercise04(input)
         assert.equal(res, 2)
       })
       it("Should count 4 words", function () {
-        const input = "Nur vier Wörter hier."
+        const input = "Only four words here."
         const res = funcs.exercise04(input)
         assert.equal(res, 4)
       })
       it("Can also handle special characters", function () {
         const input =
-          "Nicht alles - was von Leerzeichen getrennt wird, sind Wörter..."
+          "Not everything - separated by spaces, is a word..."
         const res = funcs.exercise04(input)
-        assert.equal(res, 9)
+        assert.equal(res, 8)
       })
       it("Also counts numbers as words", function () {
-        const input = "Nur 4 Wörter hier."
+        const input = "Only 4 words here."
         const res = funcs.exercise04(input)
         assert.equal(res, 4)
       })
@@ -146,17 +146,17 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(typeof funcs.exercise05, "function")
       })
       it("Should not contain capital letters", function () {
-        const input = "hier ist alles klein...."
+        const input = "all lower case here...."
         const res = funcs.exercise05(input)
         assert.equal(res, false)
       })
       it("Should recognize exactly one capital letter", function () {
-        const input = "Hier ist nur der anfang gross!"
+        const input = "Only the beginning is upper case!"
         const res = funcs.exercise05(input)
         assert.equal(res, true)
       })
       it("Should also recognize several capital letters", function () {
-        const input = "Hier ist mehr wie nur der Anfang gross."
+        const input = "Here more than the Beginning is upper Case."
         const res = funcs.exercise05(input)
         assert.equal(res, true)
       })
@@ -165,7 +165,7 @@ export function testSuite({ assert, funcs, APP }) {
         const res = funcs.exercise05(input)
         assert.equal(res, true)
       })
-      it("Should be 'false' with only special characters", function () {
+      it("Should return 'false' for only special characters", function () {
         const input = "1 + 2 - 4 = -1"
         const res = funcs.exercise05(input)
         assert.equal(res, false)
@@ -185,13 +185,13 @@ export function testSuite({ assert, funcs, APP }) {
         const res = funcs.exercise06(input)
         assert.equal(res, false)
       })
-      it("A space is not recognized as a special character", function () {
-        const input = "Ohne Sonderzeichen"
+      it("Spaces are not special characters", function () {
+        const input = "No special characters"
         const res = funcs.exercise06(input)
         assert.equal(res, false)
       })
       it("Periods are special characters", function () {
-        const input = "Hier gibt es ein Sonderzeichen."
+        const input = "Here ther is a special character."
         const res = funcs.exercise06(input)
         assert.equal(res, true)
       })
@@ -201,7 +201,7 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(res, false)
       })
       it("Should recognize special characters in the middle of the text", function () {
-        const input = "Hey! Hier sind mehr wie ein Sonderzeichen."
+        const input = "Hey! More than one special character here."
         const res = funcs.exercise06(input)
         assert.equal(res, true)
       })
@@ -210,7 +210,7 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise07()' must exist.", function () {
         assert.equal(typeof funcs.exercise07, "function")
       })
-      it("Should not contain the word 'and'", function () {
+      it("Does not contain the word 'and'", function () {
         const input = "und"
         const res = funcs.exercise07(input)
         assert.equal(res, false)
@@ -256,7 +256,7 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise09()' must exist.", function () {
         assert.equal(typeof funcs.exercise09, "function")
       })
-      it("Input is not 6 characters long", function () {
+      it("Input is shorter than 6 characters", function () {
         const input = "abcd"
         const res = funcs.exercise09(input)
         assert.equal(res, false)
@@ -374,7 +374,7 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(res, 3)
       })
       it("Should return -1 if no 'e' occurs", function () {
-        const input = "nichts"
+        const input = "nothing"
         const res = funcs.exercise13(input)
         assert.equal(res, -1)
       })
@@ -383,7 +383,7 @@ export function testSuite({ assert, funcs, APP }) {
       it("The function 'exercise14()' must exist.", function () {
         assert.equal(typeof funcs.exercise14, "function")
       })
-      it("Should give -1, as there are not enough 'e's", function () {
+      it("Should give -1, if there are not enough 'e's", function () {
         const input = "abcdefge"
         const res = funcs.exercise14(input)
         assert.equal(res, -1)
@@ -410,12 +410,12 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(typeof funcs.exercise15, "function")
       })
       it("Should abort after the first ' '", function () {
-        const input = "Hier ist langer Text"
+        const input = "Here is some long text"
         const res = funcs.exercise15(input)
         assert.equal(res, "Hier")
       })
       it("Should be empty if it starts with a space", function () {
-        const input = " nichts"
+        const input = " nothing"
         const res = funcs.exercise15(input)
         assert.equal(res, "")
       })
@@ -435,14 +435,14 @@ export function testSuite({ assert, funcs, APP }) {
         assert.equal(typeof funcs.exercise16, "function")
       })
       it("Should not read anything", function () {
-        const input = "$alles wird ignoriert."
+        const input = "$everything is ignored."
         const res = funcs.exercise16(input)
-        assert.equal(res, ["", "alles wird ignoriert."])
+        assert.equal(res, ["", "everything is ignored."])
       })
       it("Should read everything", function () {
-        const input = "alles wird eingelesen$"
+        const input = "everything is read$"
         const res = funcs.exercise16(input)
-        assert.equal(res, ["alles wird eingelesen"])
+        assert.equal(res, ["everything is read"])
       })
       it("Should only read one part", function () {
         const input = "Sollte nur bis hier$einlesen."
