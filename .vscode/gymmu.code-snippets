@@ -30,7 +30,7 @@
 		"scope": "javascript",
 		"prefix": "func",
 		"body": [
-			"export function ${1:aufgabe} (args) {",
+			"export function ${1:aufgabe}(args) {",
 			"	const input = args",
 			"	const result = []"
 			"	${0}",
